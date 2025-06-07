@@ -1,21 +1,20 @@
-# File Reader Project
+# Programming II Assignment
 
-.PHONY: help install test clean
+## Overview
+This project implements a custom file reader in Python, demonstrating object-oriented programming concepts, decorators, generators, and more.
 
-help:
-	@echo "Available commands:"
-	@echo "  install - Install dependencies"
-	@echo "  test    - Run tests"
-	@echo "  clean   - Clean up files"
+## Features
+- Custom classes: `FileReader` and `AdvancedFileReader`
+- File reading using generators and list comprehensions
+- Use of `@property`, `@staticmethod`, and `@classmethod`
+- Overridden `__str__` and `__add__` methods
+- File concatenation methods
+- Custom decorator for colored text output using ANSI codes
+- Comprehensive test suite using `pytest`
+- Continuous integration with GitHub Actions
 
-install:
-	pip install -r requirements.txt
-
-test:
-	pytest test_file_reader.py -v
-
-clean:
-	rm -rf __pycache__/
-	rm -rf .pytest_cache/
-	find . -name "*.txt" -not -name "requirements.txt" -delete
-	find . -name "*.pyc" -delete 
+## Installation
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
